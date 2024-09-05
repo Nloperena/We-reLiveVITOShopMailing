@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITO Fryfilter Shop Update Emailing</title>
+    <style>
+        body,
+        html {
+
+            font-family: 'Poppins', sans-serif;
+            text-align: left;
+            background: linear-gradient(180deg, #000000, #fedc00);
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 600px;
+            margin: 20px auto;
+            background-color: #000000c0;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            border-width: 8px;
+            border-style: solid;
+            border-radius: 1rem;
+            border-color: #fedc01;
+            padding: 2rem;
+            background-color: #000000;
+            font-size: 4rem;
+            font-weight: 900;
+            color: rgb(255, 255, 255);
+            box-shadow: 0 8px 0px #000000;
+            transition: margin 0.3s ease, font-size 0.3s ease;
+        }
+
+        h2 {
+            border-width: 3px;
+            border-style: solid;
+            border-radius: 1rem;
+            border-color: black;
+            padding: 1rem;
+            background-color: #fedc01;
+            font-size: 2rem;
+            font-weight: 900;
+            font-style: italic;
+            color: rgb(0, 0, 0);
+            box-shadow: 0 4px 0px #000000;
+            transition: margin 0.3s ease, font-size 1200ms ease;
+        }
+
+        h2:hover {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-size: 2.4rem;
+        }
+
+        .introduction-title {
+            text-align: center;
+            line-height: 3.5rem;
+        }
+
+        .section-image {
+            width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            box-shadow: 0 8px 0px #000000;
+        }
+
+        .button-link {
+            background-color: white;
+            color: #db0006;
+            font-size: 1.1rem;
+            border: 2px solid white;
+            padding: 1rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 900;
+            cursor: pointer;
+            border-radius: 40px;
+            width: 50%;
+            max-width: 220px;
+            transition: background-color 0.3s, border-color 0.3s, color 0.3s, padding 600ms, font-size 1200ms, width 300ms cubic-bezier(0.25, 0.1, 0.25, 1);
+            display: flex;
+            margin: 3rem auto;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 0px #000000;
+        }
+
+        .button-link:hover {
+            background-color: #db0006;
+            color: white;
+            font-size: 1.4rem;
+            border-color: #db0006;
+            padding: 2rem 0 2rem 0rem;
+            box-shadow: 0 8px 0px #000000;
+            width: 60%;
+        }
+
+        .left-aligned-button {
+            margin: 3rem 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 2.5rem;
+            margin: 1rem 2.5rem 0rem 2.5rem;
+        }
+
+        strong {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 4rem 0 4rem 4rem;
+            font-size: 2.2rem;
+            color: #fedc01;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .benefit-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 0 0 3rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: space-around;
+            gap: 1rem;
+        }
+
+        .break--line {
+            margin-top: 5rem;
+            max-width: 100%;
+        }
+
+        button {
+            margin-top: 3rem;
+        }
+
+        div {
+            font-family: Poppins, Helvetica, sans-serif !important;
+            text-align: left !important;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            background-color: #000000b9;
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 0px #000000;
+        }
+
+        .footer .footer-image {
+            width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            box-shadow: 0 8px 0px #000000;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 20px;
+            background-color: #fedc01;
+            padding: 1rem 0;
+            border-radius: 1rem;
+            box-shadow: 0 4px 0px #000000;
+            border-width: 3px;
+            border-style: solid;
+            border-color: black;
+            padding: 1rem;
+            margin: 0 0 2rem 0;
+        }
+
+        .social-icons img {
+            width: 2rem;
+            height: 2rem;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        .contact-info img {
+            width: 4rem;
+            height: 4rem;
+            margin-right: 10px;
+            transition: transform 0.3s;
+        }
+
+        .contact-info img:hover {
+            transform: scale(1.2);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .contact-link {
+            color: #fedc01;
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+            text-decoration: none;
+        }
+
+        .contact-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: start;
+        }
+
+        .disclaimer {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a class="heading-link" id="start-saving">
+            <h1 class="introduction-title">SEE OUR NEW SHOP</h1>
+        </a>
+        <a href="https://shop.vitofryfilter.com" target="_blank">
+            <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/bqgj1n1p/nhh/e8o/dgl/weAreLiveWebGraphic.png"
+                alt="Introduction Image" class="section-image" />
+        </a>
+
+        <a class="heading-link" id="website-launch">
+            <h2>EXPLORE OUR NEW SHOP</h2>
+        </a>
+        <div class="benefit-item">
+            <p>When you filter your oil nightly with VITO at the end of service, you’ll experience significant savings
+                in your most valuable asset—delicious fried foods. Filter up to three times daily after each shift to
+                maximize these benefits. Extend the lifespan of your oil and keep your kitchen operational with VITO's
+                easy plug-and-play system. You can continue to fry even while you filter.</p>
+        </div>
+        <a href="https://shop.vitofryfilter.com" target="_blank" class="button-link left-aligned-button">VISIT
+            SHOP</a>
+
+        <a class="heading-link" id="save-costs">
+            <h2>SAVE UP TO 50% IN OIL COSTS</h2>
+        </a>
+        <div class="benefit-item">
+            <p>When you filter your oil nightly with VITO, at the end of service, you’ll see significant savings in your
+                most valuable asset for delicious fried foods. Filter up to 3 times daily after each shift. Extend the
+                lifespan of your oil and keep your kitchen operational with VITO's easy plug-and-play system. You can
+                continue to fry even while you filter.</p>
+        </div>
+
+        <div class="benefit-item">
+            <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/bqgj1n1p/a8u/qh0/nse/select-icon.png"
+                alt="Quiz Icon" class="benefit-icon">
+            <strong>INTERACTIVE QUIZ</strong>
+
+        </div>
+        <p>Use our quiz to find the perfect VITO system for your kitchen, ensuring maximum efficiency and savings.</p>
+
+        <div class="benefit-item">
+            <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/bqgj1n1p/r3z/3dk/mnv/calc-icon.png"
+                alt="Calculator Icon" class="benefit-icon">
+            <strong>SAVINGS CALCULATOR</strong>
+
+        </div>
+        <p>Try our calculator to see exactly how much you could save on oil costs.</p>
+
+        <div class="contact-buttons">
+            <a href="https://SHOP.vitofryfilter.com/#shopify-section-template--15470090911819__quiz_section"
+                target="_blank" class="button-link left-aligned-button">TAKE QUIZ</a>
+            <a href="https://SHOP.vitofryfilter.com/#calculator-section" target="_blank"
+                class="button-link left-aligned-button">CHECK SAVINGS</a>
+        </div>
+
+        <a class="heading-link" id="benefits-vito">
+            <h2>THE BENEFITS OF VITO</h2>
+        </a>
+        <div class="benefit-item">
+            <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/bqgj1n1p/gjf/yyx/b35/icons-5.png"
+                alt="Quality Icon" class="benefit-icon">
+            <strong>IMPROVE THE QUALITY OF FRIED FOOD</strong>
+        </div>
+        <p>Enhance the crispiness and taste of your fried foods with VITO's advanced filtration.</p>
+
+        <div class="benefit-item">
+            <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/bqgj1n1p/2lb/9ri/d9c/icons-6.png"
+                alt="Chemical-Free Icon" class="benefit-icon">
+            <strong>FILTER MECHANICALLY WITHOUT CHEMICALS</strong>
+        </div>
+        <p>VITO filters mechanically, eliminating the need for chemicals in your oil filtration process.</p>
+
+        <div class="benefit-item">
+            <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/bqgj1n1p/iro/sfy/aim/icons-7.png"
+                alt="Sustainability Icon" class="benefit-icon">
+            <strong>PRACTICE SUSTAINABILITY WITH CELLULOSE FILTERS</strong>
+        </div>
+        <p>Our cellulose filters break down naturally, helping reduce emissions and promoting a more sustainable
+            practice.</p>
+
+        <div class="benefit-item">
+            <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/bqgj1n1p/vd5/yvr/3ze/icons-8.png"
+                alt="Streamline Icon" class="benefit-icon">
+            <strong>STREAMLINE LABOR AROUND THE FRYER</strong>
+        </div>
+        <p>Using VITO is easy. Simply place the VITO unit in the fryer with its cellulose filter positioned inside, plug
+            it in, and press the play button. The same filter can be used for multiple filtrations.</p>
+        <a href="https://mcd.vito.ag" target="_blank" class="button-link left-aligned-button">LEARN MORE</a>
+
+        <a class="heading-link" id="website-purpose">
+            <h2>YOUR ONE-STOP HUB FOR ALL THINGS VITO</h2>
+        </a>
+        <div class="benefit-item">
+            <p>Our new shop was designed to streamline your experience with VITO. Whether you’re looking to purchase
+                a VITO system, refill your supplies, or get detailed information on our products, our shop has you
+                covered. You can now chat live with our staff, get answers to all your filtration and VITOconnect
+                questions, and access a wealth of resources to help you get the most out of your VITO system. It’s not
+                just a store—it’s your go-to resource for everything VITO.</p>
+        </div>
+
+        <div class="contact-buttons">
+            <a href="https://shop.vitofryfilter.com" target="_blank" class="button-link left-aligned-button">VISIT
+                SHOP</a>
+            <a href="mailto:INFO@VITOFryfilter.com" class="button-link">EMAIL US</a>
+            <a href="tel:+18478590398" class="button-link">CALL US</a>
+        </div>
+        <div class="footer">
+            <h2>Follow Us!</h2>
+            <div class="social-icons">
+                <a href="https://www.facebook.com">
+                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/bqgj1n1p/p3m/wbf/09c/icons-13.png"
+                        alt="Facebook Icon" />
+                </a>
+                <a href="https://www.instagram.com">
+                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/bqgj1n1p/39p/wn9/1o5/icons-14.png"
+                        alt="Instagram Icon" />
+                </a>
+                <a href="https://www.twitter.com">
+                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/bqgj1n1p/dzq/5s7/5fe/icons-15.png"
+                        alt="Twitter Icon" />
+                </a>
+                <a href="https://www.tiktok.com">
+                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/bqgj1n1p/9oz/w6n/vuy/icons-16.png"
+                        alt="Tiktok Icon" />
+                </a>
+                <a href="https://www.youtube.com">
+                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/bqgj1n1p/1iy/1vo/xjb/icons-17.png"
+                        alt="YouTube Icon" />
+                </a>
+                <a href="https://www.linkedin.com">
+                    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/bqgj1n1p/rrx/z7k/erk/icons-18.png"
+                        alt="LinkedIn Icon" />
+                </a>
+            </div>
+            <a href="https://shop.vitofryfilter.com" target="_blank">
+                <img src="https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/594301_576008/BannerBottom.png"
+                    alt="Footer Image" class="footer-image" />
+            </a>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+
+                    <a href="https://www.google.com/maps/place/5422+Carrier+Dr+STE+102,+Orlando,+FL+32819"
+                        target="_blank" class="contact-link">
+                        <div class="contact-item">
+                            <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/bqgj1n1p/5ye/1s2/69u/icons-21.png"
+                                alt="Address Icon">
+                            5422 Carrier Dr STE 102, Orlando, FL 32819
+                        </div>
+                    </a>
+                    <a href="https://shop.vitofryfilter.com" target="_blank" class="contact-link">
+                        <div class="contact-item">
+                            <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/bqgj1n1p/c2o/8fm/glh/icons-20.png"
+                                alt="Website Icon">
+                            SHOP.VITOFRYFILTER.COM
+                        </div>
+                    </a>
+                    <a href="mailto:INFO@VITOFryfilter.com" class="contact-link">
+                        <div class="contact-item">
+                            <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/bqgj1n1p/et5/nua/v86/icons-22.png"
+                                alt="Email Icon">
+                            INFO@VITOFryfilter.com
+                        </div>
+                    </a>
+                    <a href="tel:+18478590398" class="contact-link">
+                        <div class="contact-item">
+                            <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/bqgj1n1p/fku/fr3/nr2/icons-23.png"
+                                alt="Phone Icon">
+                            +18478590398
+                        </div>
+                    </a>
+                    <p class='disclaimer'>VITO is a trademark of VITO AG, Germany.
+                        All products are made in Germany and are used by over 50,000 customers.
+
+                        If you do not wish to receive future VITO emails please contact us</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
